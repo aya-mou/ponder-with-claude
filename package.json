@@ -1,0 +1,12 @@
+{
+  "name": "ponder-with-claude-deploy",
+  "version": "1.0.0",
+  "description": "Deployment wrapper for Ponder with Claude",
+  "scripts": {
+    "start": "cd backend && npm start",
+    "build": "cd backend && npm install"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

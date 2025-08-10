@@ -21,6 +21,10 @@ app.get('/health', (req, res) => {
   res.json({ status: 'Server is running!', timestamp: new Date().toISOString() });
 });
 
+app.get('/api/test', (req, res) => {
+  res.json({ message: 'API routes are working!' });
+});
+
 // Claude API proxy endpoint
 app.post('/api/claude', async (req, res) => {
   try {

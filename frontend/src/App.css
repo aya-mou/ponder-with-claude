@@ -1,0 +1,550 @@
+/* This file sets up the aesthetic features of the landing page, which doubles as the main chat space.  */
+.access-code-screen {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F4F3EE;
+  padding: 32px;
+}
+
+.access-code-container {
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.access-code-header {
+  margin-bottom: 32px;
+}
+
+.access-title {
+  font-size: 36px;
+  font-weight: 400;
+  color: #45423A;
+  margin-bottom: 8px;
+  font-family: "Crimson Text", Georgia, "Times New Roman", Times, serif;
+}
+
+.access-subtitle {
+  font-size: 18px;
+  color: #45423A;
+  font-family: "Crimson Text", Georgia, "Times New Roman", Times, serif;
+  opacity: 0.8;
+}
+
+.access-form {
+  margin-bottom: 24px;
+}
+
+.access-input {
+  width: 100%;
+  padding: 16px 20px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: "Crimson Text", Georgia, "Times New Roman", Times, serif;
+  color: #45423A;
+  background-color: #FFFFFF;
+  margin-bottom: 16px;
+  transition: border-color 0.15s ease;
+  text-align: center;
+}
+
+.access-input:focus {
+  outline: none;
+  border-color: #C15F3C;
+  box-shadow: 0 0 0 3px rgba(193, 95, 60, 0.1);
+}
+
+.access-submit {
+  width: 100%;
+  padding: 16px 20px;
+  background-color: #C15F3C;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Crimson Text", Georgia, "Times New Roman", Times, serif;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.access-submit:hover {
+  background-color: #a8512e;
+  transform: translateY(-1px);
+}
+
+.access-submit:active {
+  transform: translateY(0);
+}
+
+/* Anthropic Claude.ai Style with Custom Colors and Crimson Text */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Crimson Text", Georgia, "Times New Roman", Times, serif;
+  background-color: #F4F3EE;
+  color: #45423A;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  background-color: #F4F3EE;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 280px;
+  background-color: #FFFFFF;
+  border-right: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.sidebar-header {
+  padding: 16px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.new-chat-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  color: #45423A;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.15s ease;
+  font-family: "Crimson Text", Georgia, "Times New Roman", Times, serif;
+}
+
+.new-chat-btn:hover {
+  background-color: #f9fafb;
+  border-color: #d1d5db;
+}
+
+.new-chat-btn:active {
+  background-color: #f3f4f6;
+}
+
+.chat-history {
+  flex: 1;
+  padding: 8px 16px;
+  overflow-y: auto;
+}
+
+.sidebar-footer {
+  padding: 16px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.connection-status {
+  margin-bottom: 12px;
+}
+
+.connection-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background-color: #f9fafb;
+  border-radius: 6px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.status-text {
+  font-size: 12px;
+  color: #45423A;
+  font-weight: 500;
+}
+
+.footer-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.footer-btn {
+  padding: 8px;
+  background: none;
+  border: none;
+  color: #45423A;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-btn:hover {
+  background-color: #f3f4f6;
+  color: #45423A;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #F4F3EE;
+  position: relative;
+}
+
+/* Welcome Screen */
+.welcome-screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 32px;
+  text-align: center;
+}
+
+.claude-logo {
+  margin-bottom: 32px;
+}
+
+.logo-icon {
+  margin: 0 auto 24px;
+  width: 80px;
+  height: 80px;
+  background-color: #C15F3C;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 10px 25px -5px rgba(193, 95, 60, 0.3);
+}
+
+.claude-title {
+  font-size: 56px;
+  font-weight: 400;
+  color: #45423A;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+  font-family: "Crimson Text", Georgia, "Times New Roman", Times, serif;
+}
+
+.claude-subtitle {
+  font-size: 22px;
+  color: #45423A;
+  font-weight: 400;
+  max-width: 480px;
+  line-height: 1.5;
+  font-family: "Crimson Text", Georgia, "Times New Roman", Times, serif;
+}
+
+.error-banner {
+  margin-top: 32px;
+  padding: 16px 24px;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  color: #dc2626;
+  font-size: 14px;
+  max-width: 480px;
+}
+
+/* Messages */
+.messages-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 32px 0 0;
+}
+
+.messages {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0 32px 32px;
+}
+
+.message {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+  align-items: flex-start;
+}
+
+.message-avatar {
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  background-color: #1f2937;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.claude-avatar {
+  width: 32px;
+  height: 32px;
+  background-color: #C15F3C;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.message-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.message-text {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #45423A;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  font-family: "Crimson Text", Georgia, "Times New Roman", Times, serif;
+}
+
+.message.user .message-text {
+  background-color: #FFFFFF;
+  padding: 16px 20px;
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+}
+
+/* Typing Indicator */
+.typing-indicator {
+  padding: 16px 0;
+}
+
+.typing-dots {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.typing-dots div {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #C15F3C;
+  animation: typing 1.4s infinite ease-in-out;
+}
+
+.typing-dots div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-dots div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0%, 60%, 100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  30% {
+    transform: translateY(-8px);
+    opacity: 1;
+  }
+}
+
+/* Input Container */
+.input-container {
+  padding: 24px 32px 32px;
+  background: linear-gradient(to top, #F4F3EE 0%, #F4F3EE 80%, rgba(244, 243, 238, 0) 100%);
+  border-top: 1px solid #f3f4f6;
+}
+
+.input-wrapper {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.input-box {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  background-color: #FFFFFF;
+  border: 2px solid #e5e7eb;
+  border-radius: 24px;
+  padding: 4px;
+  transition: border-color 0.15s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.input-box:focus-within {
+  border-color: #C15F3C;
+  box-shadow: 0 0 0 3px rgba(193, 95, 60, 0.1);
+}
+
+.message-input {
+  flex: 1;
+  padding: 16px 20px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-family: "Crimson Text", Georgia, "Times New Roman", Times, serif;
+  line-height: 1.5;
+  resize: none;
+  max-height: 128px; /* Base height (56px) + 3 additional lines (24px each) */
+  min-height: 56px; /* 16px top + 24px line + 16px bottom */
+  height: 56px; /* Start with proper single line height including padding */
+  background: transparent;
+  color: #45423A;
+  overflow-y: auto;
+  transition: height 0.15s ease;
+  vertical-align: top;
+}
+
+.message-input::placeholder {
+  color: #9ca3af;
+}
+
+.message-input:disabled {
+  color: #45423A;
+  cursor: not-allowed;
+}
+
+.send-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+  margin: 4px;
+}
+
+.send-btn.active {
+  background-color: #C15F3C;
+  color: white;
+  cursor: pointer;
+  transform: scale(1);
+}
+
+.send-btn.active:hover {
+  background-color: #a8512e;
+  transform: scale(1.05);
+}
+
+.send-btn.active:active {
+  transform: scale(0.95);
+}
+
+.send-btn:disabled {
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 260px;
+  }
+  
+  .messages {
+    padding: 0 24px 24px;
+  }
+  
+  .input-container {
+    padding: 20px 24px 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: -280px;
+    top: 0;
+    height: 100vh;
+    z-index: 1000;
+    transition: left 0.3s ease;
+  }
+  
+  .sidebar.open {
+    left: 0;
+  }
+  
+  .main-content {
+    width: 100%;
+  }
+  
+  .claude-title {
+    font-size: 36px;
+  }
+  
+  .claude-subtitle {
+    font-size: 16px;
+  }
+  
+  .messages {
+    padding: 0 16px 16px;
+  }
+  
+  .input-container {
+    padding: 16px;
+  }
+  
+  .welcome-screen {
+    padding: 48px 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .claude-title {
+    font-size: 28px;
+  }
+  
+  .logo-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 16px;
+  }
+  
+  .message {
+    margin-bottom: 24px;
+    gap: 12px;
+  }
+  
+  .message-text {
+    font-size: 15px;
+  }
+  
+  .message.user .message-text {
+    padding: 12px 16px;
+  }
+}
